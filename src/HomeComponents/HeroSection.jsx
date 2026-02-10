@@ -13,18 +13,24 @@ function HeroSection(props) {
   return (
     <div className={HomeStyle["hero"]} id="home">
       {/* <h1>{props.businessName}</h1> */}
-       <div className={HomeStyle.headerControls}>
-        {props.mode==="edit" && (
-    <button className={HomeStyle.backButton} onClick={() => console.log('Go back')}>
-      ← Back
-    </button>
-    )}
-     {props.mode==="edit" && (
-    <button className={HomeStyle.saveButton} onClick={() => console.log('Save')}>
-      Save
-    </button>
-     )}
-  </div>
+      <div className={HomeStyle.headerControls}>
+        {props.mode === "edit" && (
+          <button
+            className={HomeStyle.backButton}
+            onClick={() => console.log("Go back")}
+          >
+            ← Back
+          </button>
+        )}
+        {props.mode === "edit" && (
+          <button
+            className={HomeStyle.saveButton}
+            onClick={() => console.log("Save")}
+          >
+            Save
+          </button>
+        )}
+      </div>
       <div className={HomeStyle.heroHeadingWrapper}>
         {isEditing ? (
           <input
