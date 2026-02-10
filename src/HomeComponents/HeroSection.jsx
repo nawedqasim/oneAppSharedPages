@@ -3,9 +3,12 @@ import { useState } from "react";
 
 function HeroSection(props) {
   const [isEditing, setIsEditing] = useState(false);
+  const [isEditingSub, setIsEditingSub] = useState(false);
+  const [isEditingTagline, setIsEditingTagline] = useState(false);
+
   const [heading, setHeading] = useState(props.hero?.heading || "");
   const [subheading, setSubheading] = useState(props.hero?.subheading || "");
-  const [isEditingSub, setIsEditingSub] = useState(false);
+  const [tagline, setTagline] = useState(props.hero?.tagline || "");
 
   return (
     <div className={HomeStyle["hero"]} id="home">
@@ -53,9 +56,32 @@ function HeroSection(props) {
           )}
         </div>
       </div>
-      <div className={HomeStyle["hero-description"]}>
+      {/* <div className={HomeStyle["hero-description"]}>
         Experience the thrill of sports and recreation at {props.businessName}.
+      </div> */}
+      <div className={HomeStyle.heroTaglineWrapper}>
+        <div className={HomeStyle.heroTaglineInner}>
+          {isEditingTagline ? (
+            <input
+              className={HomeStyle.heroTaglineInput}
+              value={tagline}
+              onChange={(e) => setTagline(e.target.value)}
+            />
+          ) : (
+            <p className={HomeStyle.heroTagline}>{tagline}</p>
+          )}
+
+          {props.mode === "edit" && (
+            <button
+              className={HomeStyle.editButtonTagline}
+              onClick={() => setIsEditingTagline(!isEditingTagline)}
+            >
+              ✏️
+            </button>
+          )}
+        </div>
       </div>
+
       <div className={HomeStyle["hero-cta"]}>
         <a
           href="#services"

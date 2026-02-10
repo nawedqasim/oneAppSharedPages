@@ -839,3 +839,25 @@
   padding: 4px;
   width: 100%;
 }
+
+/* TagLine */
+.heroTaglineWrapper {
+  margin-top: 12px;
+  margin-bottom: 24px; /* spacing before buttons */
+}
+
+.heroTaglineInner {
+  position: relative;
+  display: inline-block; /* shrink to text width */
+}
+
+.editButtonTagline {
+  position: absolute;
+  top: 0;
+  right: -26px; /* sits next to text */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+
