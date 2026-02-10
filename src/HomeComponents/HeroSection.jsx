@@ -5,6 +5,8 @@ function HeroSection(props) {
   const [isEditing, setIsEditing] = useState(false);
   const [heading, setHeading] = useState(props.hero?.heading || "");
   const [subheading, setSubheading] = useState(props.hero?.subheading || "");
+  const [isEditingSub, setIsEditingSub] = useState(false);
+
   return (
     <div className={HomeStyle["hero"]} id="home">
       {/* <h1>{props.businessName}</h1> */}
@@ -29,7 +31,27 @@ function HeroSection(props) {
         )}
       </div>
       <div className={HomeStyle["hero-subtitle"]}>
-        Your Premier Sports & Recreation Destination
+        {/* Your Premier Sports & Recreation Destination */}
+        <div className={HomeStyle.heroSubWrapper}>
+          {isEditingSub ? (
+            <input
+              className={HomeStyle.heroSubInput}
+              value={subheading}
+              onChange={(e) => setSubheading(e.target.value)}
+            />
+          ) : (
+            <p className={HomeStyle.heroSubheading}>{subheading}</p>
+          )}
+
+          {props.mode === "edit" && (
+            <button
+              className={HomeStyle.editButtonSub}
+              onClick={() => setIsEditingSub(!isEditingSub)}
+            >
+              ✏️
+            </button>
+          )}
+        </div>
       </div>
       <div className={HomeStyle["hero-description"]}>
         Experience the thrill of sports and recreation at {props.businessName}.

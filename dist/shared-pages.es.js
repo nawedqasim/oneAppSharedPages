@@ -1,43 +1,43 @@
-import ne, { useState as p } from "react";
+import te, { useState as h } from "react";
 import { useNavigate as ae } from "react-router-dom";
-var j = { exports: {} }, h = {};
-var M;
+var N = { exports: {} }, p = {};
+var B;
 function se() {
-  if (M) return h;
-  M = 1;
+  if (B) return p;
+  B = 1;
   var a = /* @__PURE__ */ Symbol.for("react.transitional.element"), u = /* @__PURE__ */ Symbol.for("react.fragment");
-  function d(_, i, l) {
-    var m = null;
-    if (l !== void 0 && (m = "" + l), i.key !== void 0 && (m = "" + i.key), "key" in i) {
+  function d(v, c, l) {
+    var f = null;
+    if (l !== void 0 && (f = "" + l), c.key !== void 0 && (f = "" + c.key), "key" in c) {
       l = {};
-      for (var f in i)
-        f !== "key" && (l[f] = i[f]);
-    } else l = i;
-    return i = l.ref, {
+      for (var _ in c)
+        _ !== "key" && (l[_] = c[_]);
+    } else l = c;
+    return c = l.ref, {
       $$typeof: a,
-      type: _,
-      key: m,
-      ref: i !== void 0 ? i : null,
+      type: v,
+      key: f,
+      ref: c !== void 0 ? c : null,
       props: l
     };
   }
-  return h.Fragment = u, h.jsx = d, h.jsxs = d, h;
+  return p.Fragment = u, p.jsx = d, p.jsxs = d, p;
 }
-var b = {};
-var L;
+var g = {};
+var D;
 function oe() {
-  return L || (L = 1, process.env.NODE_ENV !== "production" && (function() {
+  return D || (D = 1, process.env.NODE_ENV !== "production" && (function() {
     function a(e) {
       if (e == null) return null;
       if (typeof e == "function")
         return e.$$typeof === ee ? null : e.displayName || e.name || null;
       if (typeof e == "string") return e;
       switch (e) {
-        case N:
+        case k:
           return "Fragment";
-        case q:
+        case z:
           return "Profiler";
-        case U:
+        case q:
           return "StrictMode";
         case X:
           return "Suspense";
@@ -50,21 +50,21 @@ function oe() {
         switch (typeof e.tag == "number" && console.error(
           "Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."
         ), e.$$typeof) {
-          case B:
+          case U:
             return "Portal";
           case V:
             return e.displayName || "Context";
           case J:
             return (e._context.displayName || "Context") + ".Consumer";
           case G:
-            var n = e.render;
-            return e = e.displayName, e || (e = n.displayName || n.name || "", e = e !== "" ? "ForwardRef(" + e + ")" : "ForwardRef"), e;
+            var t = e.render;
+            return e = e.displayName, e || (e = t.displayName || t.name || "", e = e !== "" ? "ForwardRef(" + e + ")" : "ForwardRef"), e;
           case Q:
-            return n = e.displayName || null, n !== null ? n : a(e.type) || "Memo";
-          case E:
-            n = e._payload, e = e._init;
+            return t = e.displayName || null, t !== null ? t : a(e.type) || "Memo";
+          case R:
+            t = e._payload, e = e._init;
             try {
-              return a(e(n));
+              return a(e(t));
             } catch {
             }
         }
@@ -76,50 +76,50 @@ function oe() {
     function d(e) {
       try {
         u(e);
-        var n = !1;
+        var t = !1;
       } catch {
-        n = !0;
+        t = !0;
       }
-      if (n) {
-        n = console;
-        var s = n.error, o = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
+      if (t) {
+        t = console;
+        var s = t.error, o = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
         return s.call(
-          n,
+          t,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
           o
         ), u(e);
       }
     }
-    function _(e) {
-      if (e === N) return "<>";
-      if (typeof e == "object" && e !== null && e.$$typeof === E)
+    function v(e) {
+      if (e === k) return "<>";
+      if (typeof e == "object" && e !== null && e.$$typeof === R)
         return "<...>";
       try {
-        var n = a(e);
-        return n ? "<" + n + ">" : "<...>";
+        var t = a(e);
+        return t ? "<" + t + ">" : "<...>";
       } catch {
         return "<...>";
       }
     }
-    function i() {
-      var e = k.A;
+    function c() {
+      var e = S.A;
       return e === null ? null : e.getOwner();
     }
     function l() {
       return Error("react-stack-top-frame");
     }
-    function m(e) {
-      if (A.call(e, "key")) {
-        var n = Object.getOwnPropertyDescriptor(e, "key").get;
-        if (n && n.isReactWarning) return !1;
+    function f(e) {
+      if ($.call(e, "key")) {
+        var t = Object.getOwnPropertyDescriptor(e, "key").get;
+        if (t && t.isReactWarning) return !1;
       }
       return e.key !== void 0;
     }
-    function f(e, n) {
+    function _(e, t) {
       function s() {
-        C || (C = !0, console.error(
+        F || (F = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
-          n
+          t
         ));
       }
       s.isReactWarning = !0, Object.defineProperty(e, "key", {
@@ -127,23 +127,23 @@ function oe() {
         configurable: !0
       });
     }
-    function W() {
+    function E() {
       var e = a(this.type);
-      return $[e] || ($[e] = !0, console.error(
+      return Y[e] || (Y[e] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function H(e, n, s, o, g, T) {
-      var c = s.ref;
+    function b(e, t, s, o, j, w) {
+      var i = s.ref;
       return e = {
-        $$typeof: P,
+        $$typeof: I,
         type: e,
-        key: n,
+        key: t,
         props: s,
         _owner: o
-      }, (c !== void 0 ? c : null) !== null ? Object.defineProperty(e, "ref", {
+      }, (i !== void 0 ? i : null) !== null ? Object.defineProperty(e, "ref", {
         enumerable: !1,
-        get: W
+        get: E
       }) : Object.defineProperty(e, "ref", { enumerable: !1, value: null }), e._store = {}, Object.defineProperty(e._store, "validated", {
         configurable: !1,
         enumerable: !1,
@@ -158,33 +158,33 @@ function oe() {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: g
+        value: j
       }), Object.defineProperty(e, "_debugTask", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: T
+        value: w
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function O(e, n, s, o, g, T) {
-      var c = n.children;
-      if (c !== void 0)
+    function A(e, t, s, o, j, w) {
+      var i = t.children;
+      if (i !== void 0)
         if (o)
-          if (re(c)) {
-            for (o = 0; o < c.length; o++)
-              y(c[o]);
-            Object.freeze && Object.freeze(c);
+          if (re(i)) {
+            for (o = 0; o < i.length; o++)
+              P(i[o]);
+            Object.freeze && Object.freeze(i);
           } else
             console.error(
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
-        else y(c);
-      if (A.call(n, "key")) {
-        c = a(e);
-        var v = Object.keys(n).filter(function(te) {
-          return te !== "key";
+        else P(i);
+      if ($.call(t, "key")) {
+        i = a(e);
+        var m = Object.keys(t).filter(function(ne) {
+          return ne !== "key";
         });
-        o = 0 < v.length ? "{key: someKey, " + v.join(": ..., ") + ": ...}" : "{key: someKey}", F[c + o] || (v = 0 < v.length ? "{" + v.join(": ..., ") + ": ...}" : "{}", console.error(
+        o = 0 < m.length ? "{key: someKey, " + m.join(": ..., ") + ": ...}" : "{key: someKey}", L[i + o] || (m = 0 < m.length ? "{" + m.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
@@ -192,35 +192,35 @@ React keys must be passed directly to JSX without using spread:
   let props = %s;
   <%s key={someKey} {...props} />`,
           o,
-          c,
-          v,
-          c
-        ), F[c + o] = !0);
+          i,
+          m,
+          i
+        ), L[i + o] = !0);
       }
-      if (c = null, s !== void 0 && (d(s), c = "" + s), m(n) && (d(n.key), c = "" + n.key), "key" in n) {
+      if (i = null, s !== void 0 && (d(s), i = "" + s), f(t) && (d(t.key), i = "" + t.key), "key" in t) {
         s = {};
-        for (var S in n)
-          S !== "key" && (s[S] = n[S]);
-      } else s = n;
-      return c && f(
+        for (var O in t)
+          O !== "key" && (s[O] = t[O]);
+      } else s = t;
+      return i && _(
         s,
         typeof e == "function" ? e.displayName || e.name || "Unknown" : e
-      ), H(
+      ), b(
         e,
-        c,
+        i,
         s,
-        i(),
-        g,
-        T
+        c(),
+        j,
+        w
       );
     }
-    function y(e) {
-      z(e) ? e._store && (e._store.validated = 1) : typeof e == "object" && e !== null && e.$$typeof === E && (e._payload.status === "fulfilled" ? z(e._payload.value) && e._payload.value._store && (e._payload.value._store.validated = 1) : e._store && (e._store.validated = 1));
+    function P(e) {
+      C(e) ? e._store && (e._store.validated = 1) : typeof e == "object" && e !== null && e.$$typeof === R && (e._payload.status === "fulfilled" ? C(e._payload.value) && e._payload.value._store && (e._payload.value._store.validated = 1) : e._store && (e._store.validated = 1));
     }
-    function z(e) {
-      return typeof e == "object" && e !== null && e.$$typeof === P;
+    function C(e) {
+      return typeof e == "object" && e !== null && e.$$typeof === I;
     }
-    var x = ne, P = /* @__PURE__ */ Symbol.for("react.transitional.element"), B = /* @__PURE__ */ Symbol.for("react.portal"), N = /* @__PURE__ */ Symbol.for("react.fragment"), U = /* @__PURE__ */ Symbol.for("react.strict_mode"), q = /* @__PURE__ */ Symbol.for("react.profiler"), J = /* @__PURE__ */ Symbol.for("react.consumer"), V = /* @__PURE__ */ Symbol.for("react.context"), G = /* @__PURE__ */ Symbol.for("react.forward_ref"), X = /* @__PURE__ */ Symbol.for("react.suspense"), Z = /* @__PURE__ */ Symbol.for("react.suspense_list"), Q = /* @__PURE__ */ Symbol.for("react.memo"), E = /* @__PURE__ */ Symbol.for("react.lazy"), K = /* @__PURE__ */ Symbol.for("react.activity"), ee = /* @__PURE__ */ Symbol.for("react.client.reference"), k = x.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, A = Object.prototype.hasOwnProperty, re = Array.isArray, R = console.createTask ? console.createTask : function() {
+    var x = te, I = /* @__PURE__ */ Symbol.for("react.transitional.element"), U = /* @__PURE__ */ Symbol.for("react.portal"), k = /* @__PURE__ */ Symbol.for("react.fragment"), q = /* @__PURE__ */ Symbol.for("react.strict_mode"), z = /* @__PURE__ */ Symbol.for("react.profiler"), J = /* @__PURE__ */ Symbol.for("react.consumer"), V = /* @__PURE__ */ Symbol.for("react.context"), G = /* @__PURE__ */ Symbol.for("react.forward_ref"), X = /* @__PURE__ */ Symbol.for("react.suspense"), Z = /* @__PURE__ */ Symbol.for("react.suspense_list"), Q = /* @__PURE__ */ Symbol.for("react.memo"), R = /* @__PURE__ */ Symbol.for("react.lazy"), K = /* @__PURE__ */ Symbol.for("react.activity"), ee = /* @__PURE__ */ Symbol.for("react.client.reference"), S = x.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, $ = Object.prototype.hasOwnProperty, re = Array.isArray, T = console.createTask ? console.createTask : function() {
       return null;
     };
     x = {
@@ -228,136 +228,156 @@ React keys must be passed directly to JSX without using spread:
         return e();
       }
     };
-    var C, $ = {}, I = x.react_stack_bottom_frame.bind(
+    var F, Y = {}, M = x.react_stack_bottom_frame.bind(
       x,
       l
-    )(), Y = R(_(l)), F = {};
-    b.Fragment = N, b.jsx = function(e, n, s) {
-      var o = 1e4 > k.recentlyCreatedOwnerStacks++;
-      return O(
+    )(), W = T(v(l)), L = {};
+    g.Fragment = k, g.jsx = function(e, t, s) {
+      var o = 1e4 > S.recentlyCreatedOwnerStacks++;
+      return A(
         e,
-        n,
+        t,
         s,
         !1,
-        o ? Error("react-stack-top-frame") : I,
-        o ? R(_(e)) : Y
+        o ? Error("react-stack-top-frame") : M,
+        o ? T(v(e)) : W
       );
-    }, b.jsxs = function(e, n, s) {
-      var o = 1e4 > k.recentlyCreatedOwnerStacks++;
-      return O(
+    }, g.jsxs = function(e, t, s) {
+      var o = 1e4 > S.recentlyCreatedOwnerStacks++;
+      return A(
         e,
-        n,
+        t,
         s,
         !0,
-        o ? Error("react-stack-top-frame") : I,
-        o ? R(_(e)) : Y
+        o ? Error("react-stack-top-frame") : M,
+        o ? T(v(e)) : W
       );
     };
-  })()), b;
+  })()), g;
 }
-var D;
-function ce() {
-  return D || (D = 1, process.env.NODE_ENV === "production" ? j.exports = se() : j.exports = oe()), j.exports;
+var H;
+function ie() {
+  return H || (H = 1, process.env.NODE_ENV === "production" ? N.exports = se() : N.exports = oe()), N.exports;
 }
-var r = ce();
-const ie = "_oneappRoot_cl4tz_1", le = "_navbar_cl4tz_73", ue = "_logo_cl4tz_109", de = "_container_cl4tz_241", _e = "_hero_cl4tz_263", fe = "_footer_cl4tz_1161", me = "_active_cl4tz_1395", ve = "_heroHeadingWrapper_cl4tz_1597", he = "_editButton_cl4tz_1607", be = "_heroInput_cl4tz_1629", t = {
-  oneappRoot: ie,
-  "page-wrapper": "_page-wrapper_cl4tz_57",
+var r = ie();
+const ce = "_oneappRoot_vl9n9_1", le = "_navbar_vl9n9_73", ue = "_logo_vl9n9_109", de = "_container_vl9n9_241", _e = "_hero_vl9n9_263", ve = "_footer_vl9n9_1161", fe = "_active_vl9n9_1395", me = "_heroHeadingWrapper_vl9n9_1597", he = "_editButton_vl9n9_1607", be = "_heroInput_vl9n9_1629", pe = "_heroSubWrapper_vl9n9_1641", ge = "_editButtonSub_vl9n9_1653", xe = "_heroSubInput_vl9n9_1673", n = {
+  oneappRoot: ce,
+  "page-wrapper": "_page-wrapper_vl9n9_57",
   navbar: le,
-  "navbar-content": "_navbar-content_cl4tz_91",
+  "navbar-content": "_navbar-content_vl9n9_91",
   logo: ue,
-  "logo-icon": "_logo-icon_cl4tz_127",
-  "nav-menu": "_nav-menu_cl4tz_151",
-  "nav-link": "_nav-link_cl4tz_163",
-  "book-now-btn": "_book-now-btn_cl4tz_187",
-  "mobile-menu-btn": "_mobile-menu-btn_cl4tz_221",
+  "logo-icon": "_logo-icon_vl9n9_127",
+  "nav-menu": "_nav-menu_vl9n9_151",
+  "nav-link": "_nav-link_vl9n9_163",
+  "book-now-btn": "_book-now-btn_vl9n9_187",
+  "mobile-menu-btn": "_mobile-menu-btn_vl9n9_221",
   container: de,
   hero: _e,
-  "hero-subtitle": "_hero-subtitle_cl4tz_297",
-  "hero-description": "_hero-description_cl4tz_313",
-  "hero-cta": "_hero-cta_cl4tz_331",
-  "cta-btn": "_cta-btn_cl4tz_347",
-  "cta-primary": "_cta-primary_cl4tz_371",
-  "cta-secondary": "_cta-secondary_cl4tz_391",
-  "content-section": "_content-section_cl4tz_437",
-  "section-title": "_section-title_cl4tz_445",
-  "section-subtitle": "_section-subtitle_cl4tz_461",
-  "services-grid": "_services-grid_cl4tz_589",
-  "service-card": "_service-card_cl4tz_603",
-  "service-icon": "_service-icon_cl4tz_631",
-  "service-title": "_service-title_cl4tz_641",
-  "service-description": "_service-description_cl4tz_655",
-  "service-price": "_service-price_cl4tz_669",
-  "service-price-label": "_service-price-label_cl4tz_681",
-  footer: fe,
-  "footer-content": "_footer-content_cl4tz_1177",
-  "social-links": "_social-links_cl4tz_1207",
-  "social-link": "_social-link_cl4tz_1207",
-  active: me,
-  heroHeadingWrapper: ve,
+  "hero-subtitle": "_hero-subtitle_vl9n9_297",
+  "hero-description": "_hero-description_vl9n9_313",
+  "hero-cta": "_hero-cta_vl9n9_331",
+  "cta-btn": "_cta-btn_vl9n9_347",
+  "cta-primary": "_cta-primary_vl9n9_371",
+  "cta-secondary": "_cta-secondary_vl9n9_391",
+  "content-section": "_content-section_vl9n9_437",
+  "section-title": "_section-title_vl9n9_445",
+  "section-subtitle": "_section-subtitle_vl9n9_461",
+  "services-grid": "_services-grid_vl9n9_589",
+  "service-card": "_service-card_vl9n9_603",
+  "service-icon": "_service-icon_vl9n9_631",
+  "service-title": "_service-title_vl9n9_641",
+  "service-description": "_service-description_vl9n9_655",
+  "service-price": "_service-price_vl9n9_669",
+  "service-price-label": "_service-price-label_vl9n9_681",
+  footer: ve,
+  "footer-content": "_footer-content_vl9n9_1177",
+  "social-links": "_social-links_vl9n9_1207",
+  "social-link": "_social-link_vl9n9_1207",
+  active: fe,
+  heroHeadingWrapper: me,
   editButton: he,
-  heroInput: be
+  heroInput: be,
+  heroSubWrapper: pe,
+  editButtonSub: ge,
+  heroSubInput: xe
 };
-function pe(a) {
+function je(a) {
   const u = ae();
   function d() {
     console.log("Business Name:", a.businessName), u(`/${a.businessName}/Login`);
   }
-  return /* @__PURE__ */ r.jsx("nav", { className: t.navbar, children: /* @__PURE__ */ r.jsxs("div", { className: t["navbar-content"], children: [
-    /* @__PURE__ */ r.jsxs("div", { className: t.logo, children: [
-      /* @__PURE__ */ r.jsx("div", { className: t["logo-icon"], children: "🏆" }),
+  return /* @__PURE__ */ r.jsx("nav", { className: n.navbar, children: /* @__PURE__ */ r.jsxs("div", { className: n["navbar-content"], children: [
+    /* @__PURE__ */ r.jsxs("div", { className: n.logo, children: [
+      /* @__PURE__ */ r.jsx("div", { className: n["logo-icon"], children: "🏆" }),
       /* @__PURE__ */ r.jsx("span", { children: "Elite Sports" })
     ] }),
     /* @__PURE__ */ r.jsx(
       "button",
       {
-        className: t["mobile-menu-btn"],
+        className: n["mobile-menu-btn"],
         onClick: a.toggleMenu,
         children: "☰"
       }
     ),
-    /* @__PURE__ */ r.jsxs("div", { className: `${t["nav-menu"]} ${a.isMenuOpen ? t.active : ""}`, children: [
-      /* @__PURE__ */ r.jsx("a", { href: "#home", className: t["nav-link"], children: "Home" }),
-      /* @__PURE__ */ r.jsx("a", { href: "#services", className: t["nav-link"], children: "Services" }),
-      /* @__PURE__ */ r.jsx("a", { href: "#about", className: t["nav-link"], children: "About" }),
-      /* @__PURE__ */ r.jsx("a", { href: "#contact", className: t["nav-link"], children: "Contact" }),
-      /* @__PURE__ */ r.jsx("button", { className: t["book-now-btn"], onClick: d, children: "Book Now" })
+    /* @__PURE__ */ r.jsxs("div", { className: `${n["nav-menu"]} ${a.isMenuOpen ? n.active : ""}`, children: [
+      /* @__PURE__ */ r.jsx("a", { href: "#home", className: n["nav-link"], children: "Home" }),
+      /* @__PURE__ */ r.jsx("a", { href: "#services", className: n["nav-link"], children: "Services" }),
+      /* @__PURE__ */ r.jsx("a", { href: "#about", className: n["nav-link"], children: "About" }),
+      /* @__PURE__ */ r.jsx("a", { href: "#contact", className: n["nav-link"], children: "Contact" }),
+      /* @__PURE__ */ r.jsx("button", { className: n["book-now-btn"], onClick: d, children: "Book Now" })
     ] })
   ] }) });
 }
-function xe(a) {
-  const [u, d] = p(!1), [_, i] = p(a.hero?.heading || ""), [l, m] = p(a.hero?.subheading || "");
-  return /* @__PURE__ */ r.jsxs("div", { className: t.hero, id: "home", children: [
-    /* @__PURE__ */ r.jsxs("div", { className: t.heroHeadingWrapper, children: [
+function Ne(a) {
+  const [u, d] = h(!1), [v, c] = h(a.hero?.heading || ""), [l, f] = h(a.hero?.subheading || ""), [_, E] = h(!1);
+  return /* @__PURE__ */ r.jsxs("div", { className: n.hero, id: "home", children: [
+    /* @__PURE__ */ r.jsxs("div", { className: n.heroHeadingWrapper, children: [
       u ? /* @__PURE__ */ r.jsx(
         "input",
         {
-          className: t.heroInput,
-          value: _,
-          onChange: (f) => i(f.target.value)
+          className: n.heroInput,
+          value: v,
+          onChange: (b) => c(b.target.value)
         }
-      ) : /* @__PURE__ */ r.jsx("h1", { className: t.heroHeading, children: _ }),
+      ) : /* @__PURE__ */ r.jsx("h1", { className: n.heroHeading, children: v }),
       a.mode === "edit" && /* @__PURE__ */ r.jsx(
         "button",
         {
-          className: t.editButton,
+          className: n.editButton,
           onClick: () => d(!u),
           children: "✏️"
         }
       )
     ] }),
-    /* @__PURE__ */ r.jsx("div", { className: t["hero-subtitle"], children: "Your Premier Sports & Recreation Destination" }),
-    /* @__PURE__ */ r.jsxs("div", { className: t["hero-description"], children: [
+    /* @__PURE__ */ r.jsx("div", { className: n["hero-subtitle"], children: /* @__PURE__ */ r.jsxs("div", { className: n.heroSubWrapper, children: [
+      _ ? /* @__PURE__ */ r.jsx(
+        "input",
+        {
+          className: n.heroSubInput,
+          value: l,
+          onChange: (b) => f(b.target.value)
+        }
+      ) : /* @__PURE__ */ r.jsx("p", { className: n.heroSubheading, children: l }),
+      a.mode === "edit" && /* @__PURE__ */ r.jsx(
+        "button",
+        {
+          className: n.editButtonSub,
+          onClick: () => E(!_),
+          children: "✏️"
+        }
+      )
+    ] }) }),
+    /* @__PURE__ */ r.jsxs("div", { className: n["hero-description"], children: [
       "Experience the thrill of sports and recreation at ",
       a.businessName,
       "."
     ] }),
-    /* @__PURE__ */ r.jsxs("div", { className: t["hero-cta"], children: [
+    /* @__PURE__ */ r.jsxs("div", { className: n["hero-cta"], children: [
       /* @__PURE__ */ r.jsx(
         "a",
         {
           href: "#services",
-          className: `${t["cta-btn"]} ${t["cta-primary"]}`,
+          className: `${n["cta-btn"]} ${n["cta-primary"]}`,
           children: "Explore Services"
         }
       ),
@@ -365,40 +385,40 @@ function xe(a) {
         "a",
         {
           href: "#contact",
-          className: `${t["cta-btn"]} ${t["cta-secondary"]}`,
+          className: `${n["cta-btn"]} ${n["cta-secondary"]}`,
           children: "Contact Us"
         }
       )
     ] })
   ] });
 }
-function ge() {
-  return /* @__PURE__ */ r.jsx("footer", { className: t.footer, children: /* @__PURE__ */ r.jsxs("div", { className: t["footer-content"], children: [
+function Ee() {
+  return /* @__PURE__ */ r.jsx("footer", { className: n.footer, children: /* @__PURE__ */ r.jsxs("div", { className: n["footer-content"], children: [
     /* @__PURE__ */ r.jsx("p", { children: "© 2025 Elite Sports Complex. All rights reserved." }),
-    /* @__PURE__ */ r.jsxs("div", { className: t["social-links"], children: [
-      /* @__PURE__ */ r.jsx("a", { href: "#", className: t["social-link"], title: "Facebook", children: "📘" }),
-      /* @__PURE__ */ r.jsx("a", { href: "#", className: t["social-link"], title: "Instagram", children: "📷" }),
-      /* @__PURE__ */ r.jsx("a", { href: "#", className: t["social-link"], title: "Twitter", children: "🐦" }),
-      /* @__PURE__ */ r.jsx("a", { href: "#", className: t["social-link"], title: "YouTube", children: "📺" })
+    /* @__PURE__ */ r.jsxs("div", { className: n["social-links"], children: [
+      /* @__PURE__ */ r.jsx("a", { href: "#", className: n["social-link"], title: "Facebook", children: "📘" }),
+      /* @__PURE__ */ r.jsx("a", { href: "#", className: n["social-link"], title: "Instagram", children: "📷" }),
+      /* @__PURE__ */ r.jsx("a", { href: "#", className: n["social-link"], title: "Twitter", children: "🐦" }),
+      /* @__PURE__ */ r.jsx("a", { href: "#", className: n["social-link"], title: "YouTube", children: "📺" })
     ] })
   ] }) });
 }
-function w(a) {
-  return /* @__PURE__ */ r.jsxs("div", { className: t["service-card"], children: [
-    /* @__PURE__ */ r.jsx("div", { className: t["service-icon"], children: a.icon }),
-    /* @__PURE__ */ r.jsx("div", { className: t["service-title"], children: a.title }),
-    /* @__PURE__ */ r.jsx("div", { className: t["service-description"], children: a.description }),
-    /* @__PURE__ */ r.jsx("div", { className: t["service-price"], children: a.price }),
-    /* @__PURE__ */ r.jsx("div", { className: t["service-price-label"], children: a.priceLabel })
+function y(a) {
+  return /* @__PURE__ */ r.jsxs("div", { className: n["service-card"], children: [
+    /* @__PURE__ */ r.jsx("div", { className: n["service-icon"], children: a.icon }),
+    /* @__PURE__ */ r.jsx("div", { className: n["service-title"], children: a.title }),
+    /* @__PURE__ */ r.jsx("div", { className: n["service-description"], children: a.description }),
+    /* @__PURE__ */ r.jsx("div", { className: n["service-price"], children: a.price }),
+    /* @__PURE__ */ r.jsx("div", { className: n["service-price-label"], children: a.priceLabel })
   ] });
 }
-function je() {
+function ke() {
   return /* @__PURE__ */ r.jsxs(r.Fragment, { children: [
-    /* @__PURE__ */ r.jsx("h2", { className: t["section-title"], id: "services", children: "Our Services" }),
-    /* @__PURE__ */ r.jsx("p", { className: t["section-subtitle"], children: "Choose from our wide range of sports activities and training programs" }),
-    /* @__PURE__ */ r.jsxs("div", { className: t["services-grid"], children: [
+    /* @__PURE__ */ r.jsx("h2", { className: n["section-title"], id: "services", children: "Our Services" }),
+    /* @__PURE__ */ r.jsx("p", { className: n["section-subtitle"], children: "Choose from our wide range of sports activities and training programs" }),
+    /* @__PURE__ */ r.jsxs("div", { className: n["services-grid"], children: [
       /* @__PURE__ */ r.jsx(
-        w,
+        y,
         {
           title: "Tennis Courts",
           description: "8 professional-grade tennis courts with clay and hard surfaces. Perfect for players of all skill levels.",
@@ -408,7 +428,7 @@ function je() {
         }
       ),
       /* @__PURE__ */ r.jsx(
-        w,
+        y,
         {
           title: "Basketball Courts",
           description: "Indoor courts with professional flooring and lighting. Ideal for training and competitive games.",
@@ -418,7 +438,7 @@ function je() {
         }
       ),
       /* @__PURE__ */ r.jsx(
-        w,
+        y,
         {
           title: "Soccer Field",
           description: "Full-size artificial turf field with modern facilities for practices and matches.",
@@ -430,30 +450,30 @@ function je() {
     ] })
   ] });
 }
-function ke({ data: a, mode: u }) {
-  const [d, _] = p(!0), [i, l] = p(!0);
-  function m() {
-    _(!d), l(!i);
+function Te({ data: a, mode: u }) {
+  const [d, v] = h(!0), [c, l] = h(!0);
+  function f() {
+    v(!d), l(!c);
   }
-  const f = a.businessName || "Business Name";
-  return /* @__PURE__ */ r.jsxs("div", { className: t.oneappRoot, children: [
-    /* @__PURE__ */ r.jsxs("div", { className: t["page-wrapper"], children: [
-      /* @__PURE__ */ r.jsx(pe, { toggleMenu: m, isMenuOpen: i, businessName: f }),
-      /* @__PURE__ */ r.jsxs("div", { className: t.container, children: [
+  const _ = a.businessName || "Business Name";
+  return /* @__PURE__ */ r.jsxs("div", { className: n.oneappRoot, children: [
+    /* @__PURE__ */ r.jsxs("div", { className: n["page-wrapper"], children: [
+      /* @__PURE__ */ r.jsx(je, { toggleMenu: f, isMenuOpen: c, businessName: _ }),
+      /* @__PURE__ */ r.jsxs("div", { className: n.container, children: [
         /* @__PURE__ */ r.jsx(
-          xe,
+          Ne,
           {
-            businessName: f,
+            businessName: _,
             hero: a?.hero,
             mode: u
           }
         ),
-        /* @__PURE__ */ r.jsx("div", { className: t["content-section"], children: /* @__PURE__ */ r.jsx(je, {}) })
+        /* @__PURE__ */ r.jsx("div", { className: n["content-section"], children: /* @__PURE__ */ r.jsx(ke, {}) })
       ] })
     ] }),
-    /* @__PURE__ */ r.jsx(ge, {})
+    /* @__PURE__ */ r.jsx(Ee, {})
   ] });
 }
 export {
-  ke as SharedDashboardPage
+  Te as SharedDashboardPage
 };
