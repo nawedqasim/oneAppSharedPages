@@ -861,3 +861,55 @@
   font-size: 13px;
 }
 
+.hero {
+  position: relative; /* makes hero the positioning anchor */
+}
+
+/* container holding both buttons */
+.headerControls {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px; /* space from hero edges */
+  z-index: 5;
+}
+
+.backButton {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.backButton:hover {
+  background: #f5f5f5;
+}
+
+.saveButton {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: biology
+}
+
+.saveButton:hover {
+  background: #43a047;
+}
+
+
+
+
+
+
+
